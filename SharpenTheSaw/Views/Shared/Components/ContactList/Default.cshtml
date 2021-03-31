@@ -1,7 +1,7 @@
 ﻿@model List<Teams>
 
 
-<div class="teamList">
+<div>
     <h4>Team List</h4>
     <h5>
         <a asp-action="Index"
@@ -13,12 +13,12 @@
 
     @foreach (var x in Model)   
     {
-        <h5>
+        <div class="teamList">
             <a asp-action="Index" asp-controller="Home"
                asp-route-teamid="@x.TeamId"
                asp-route-teamname="@x.TeamName"
-               asp-route-pagenum="1">@x.TeamName</a>
-        </h5>
+               asp-route-pagenum="1" class="teamList-text">@x.TeamName</a>
+        </div>
     }
 </div>
 

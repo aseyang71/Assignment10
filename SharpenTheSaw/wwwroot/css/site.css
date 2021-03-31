@@ -12,11 +12,31 @@ a {
   color: black;
 }
 
-.teamList{
+.teamList {
+    margin-bottom: 20px;
+    width: 100px;
+    height: 32px;
+    background-color: #45B6FE;
+}
+
+.teamList:hover{
+    background-color:#3792CB;
+    text-decoration:none;
+}
+
+.teamList-text {
+    color: white;
+    margin-top: 20px;
+}
+
+.teamList-text:hover {
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 
-h5 a {
+/*a {
     background: none;
     color: #ffa260;
     border: 1.2px solid;
@@ -25,16 +45,16 @@ h5 a {
     transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
     margin-top: 2px;
     margin-bottom: 2px;
-}
+}*/
 
-h5 a:hover {
+/*a:hover {
     border-color: #f1ff5c;
     color: white;
     box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
     transform: translateY(-0.25rem);
     cursor: pointer;
     text-decoration: none;
-}
+}*/
 
 .btn-primary {
   color: #fff;

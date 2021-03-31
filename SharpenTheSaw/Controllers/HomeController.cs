@@ -27,6 +27,7 @@ namespace SharpenTheSaw.Controllers
         {
             int pageSize = 5;
             //int test = context.Teams.Count();
+            ViewBag.Team = teamname;
 
             return View(new IndexViewModel
             {
