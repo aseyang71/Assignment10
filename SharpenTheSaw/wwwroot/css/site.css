@@ -12,6 +12,10 @@ a {
   color: black;
 }
 
+h4 {
+    margin-right: 50px;
+}
+
 .teamList {
     margin-bottom: 20px;
     width: 100px;
