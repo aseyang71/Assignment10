@@ -12,15 +12,28 @@ a {
   color: black;
 }
 
-h4 {
+h1{
+    color: darkblue;
+}
+
+.teamHead{
+    color:darkblue;
     margin-right: 50px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 32px;
+    text-decoration: none;
 }
 
 .teamList {
     margin-bottom: 20px;
+    margin-left: 30px;
     width: 100px;
     height: 32px;
     background-color: #45B6FE;
+    border-radius: 10px;
+    text-decoration: none;
 }
 
 .teamList:hover{
@@ -29,7 +42,7 @@ h4 {
 }
 
 .teamList-text {
-    color: white;
+    color: darkblue;
     margin-top: 20px;
 }
 
@@ -37,6 +50,15 @@ h4 {
     text-decoration: none;
     color: #ffffff;
     cursor: pointer;
+}
+
+.teamList-text:active {
+    background-color: yellow;
+}
+
+th, td {
+    border: thick !important;
+    border-color: white !important;
 }
 
 
@@ -111,7 +133,7 @@ body {
   margin-bottom: 60px;
 
   color: white;
-  background-color:#151b29;
+  background-color:#fff;
 }
 .footer {
   position: absolute;

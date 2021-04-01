@@ -1,15 +1,16 @@
 ﻿@model List<Teams>
 
 
-<div>
-    <h4>Team List</h4>
-    <h5 class="teamList">
+<div class="border border-secondary rounded">
+    <h5 class="teamHead">Team List</h5>
+    <div class="teamList">
         <a asp-action="Index"
            asp-controller="Home"
            asp-route-teamid=""
            asp-route-teamname=""
-           asp-route-pagenum="">Home</a>
-    </h5>
+           asp-route-pagenum=""
+           class="teamList-text">All Teams</a>
+    </div>
 
     @foreach (var x in Model)   
     {

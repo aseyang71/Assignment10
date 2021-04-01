@@ -27,11 +27,12 @@ namespace SharpenTheSaw.Controllers
         {
             int pageSize = 5;
             //int test = context.Teams.Count();
-            ViewBag.Team = teamname;
+            string DynTeamName = teamname;
+            ViewBag.Team = "Viewing " + DynTeamName + " List";
 
             return View(new IndexViewModel
             {
-
+                
                 Bowlers = (context.Bowlers
 
                     //.FromSqlInterpolated($"Select * From Bowlers WHERE TeamId = {teamid} OR {teamid} IS NULL")
@@ -55,7 +56,7 @@ namespace SharpenTheSaw.Controllers
                 },
 
                 TeamName = teamname
-
+                
             });
         }
 
