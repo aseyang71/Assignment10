@@ -1,5 +1,6 @@
 ﻿@model List<Teams>
 
+@*Link to the whole list*@
 
 <div class="border border-secondary rounded">
     <h5 class="teamHead">Team List</h5>
@@ -12,9 +13,11 @@
            class="teamList-text">All Teams</a>
     </div>
 
-    @foreach (var x in Model)   
+    @*Looping through the team list and apply btn-primary if the selected teamname is the same as the one in IndexViewModel*@
+
+    @foreach (var x in Model)
     {
-        <div class="teamList">
+        <div class="teamList @(x.TeamName == ViewBag.TeamName || x.TeamName == "" ? "btn-primary" : "btn-outline-secondary")">
             <a asp-action="Index" asp-controller="Home"
                asp-route-teamid="@x.TeamId"
                asp-route-teamname="@x.TeamName"

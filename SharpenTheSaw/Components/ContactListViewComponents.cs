@@ -17,6 +17,9 @@ namespace SharpenTheSaw.Components
 
         public IViewComponentResult Invoke()
         {
+            // Set ViewBag value to the routedata from the view to set the condition deciding what Bootstrap class to apply 
+            ViewBag.TeamName = RouteData?.Values["TeamName"];
+
             return View(context.Teams
                 .FromSqlInterpolated($"Select * From Teams")
                 .ToList()

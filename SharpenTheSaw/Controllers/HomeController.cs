@@ -16,7 +16,6 @@ namespace SharpenTheSaw.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly BowlingLeagueContext context;
 
-
         public HomeController(ILogger<HomeController> logger, BowlingLeagueContext ctx)
         {
             _logger = logger;
@@ -26,7 +25,6 @@ namespace SharpenTheSaw.Controllers
         public IActionResult Index(int? teamid, string teamname, int pageNum = 0)
         {
             int pageSize = 5;
-            //int test = context.Teams.Count();
             string DynTeamName = teamname;
             ViewBag.Team = "Viewing " + DynTeamName + " List";
 
@@ -55,6 +53,7 @@ namespace SharpenTheSaw.Controllers
                         context.Bowlers.Where(t => t.TeamId == teamid).Count())
                 },
 
+                //Store the teamname value to the TeamName variable
                 TeamName = teamname
                 
             });

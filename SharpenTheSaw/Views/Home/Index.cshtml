@@ -1,8 +1,11 @@
 ﻿@*@model IEnumerable<Bowlers>*@
 @model IndexViewModel
 
+@*// Display the team name using ViewBag that was passed and set in the homecontroller "TeamName = teamname"*@
 <h1>@ViewBag.Team</h1>
 
+
+@*// Loop thorugh each element of the bowler in a table and apply bootstrap table classes for styling*@
 <div>
     <table class="table table-striped">
         <thead>
@@ -36,6 +39,8 @@
         </tbody>
     </table>
 </div>
+
+    @*// Apply different styling when the pagination is clicked or not*@
 
 <div page-info="@Model.PageNumberInfo"
      page-url-teamname="@Model.TeamName"
